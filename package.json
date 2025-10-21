@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@arcologynetwork/concurrentlib": "^2.2.1",
+    "@arcologynetwork/frontend-tools": "^1.0.11",
     "@arcologynetwork/frontend-util": "^1.0.10",
     "@nomiclabs/hardhat-ethers": "^2.2.3",
     "ethers": "^5.8.0",
