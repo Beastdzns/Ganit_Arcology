@@ -1,6 +1,32 @@
 # Ganit - Maths Dual Battle
 
 Ganit is a multiplayer maths dual battle game where two players compete against each other in a minute long maths quiz and the one who solves more questions wins the battle. The Game is built usin the Arcology Network's Parallel Apis and Container Data Structures allowing true concurrency and parallelization, thus enabling scalability of the project.
+
+## To run this project
+
+```
+git clone https://github.com/beastdzns/Ganit_Arcology.git
+cd Ganit_Arcology
+npm i
+npx hardhat run scripts/test.js --network arcology // This will generate the transaction outputs
+```
+After this we will need to submit these transactions to the local node:
+Ensure that your node is running and note down your ip (follow this [example](https://docs.arcology.network/arcology-concurrent-programming-guide/run-the-examples#set-up-the-devnet))
+
+Check Status:
+```
+npm install -g @arcologynetwork/frontend-tools
+npx arcology.net-monitor http://$localip:8545
+```
+
+Send Transactions:
+```
+npx arcology.net-tx-sender http://192.168.1.103:8545 benchmark/ganit/txs/create-games/       // Replace the IP with your Devnet node IP
+npx arcology.net-tx-sender http://192.168.1.103:8545 benchmark/ganit/txs/end-games/          // Replace the IP with your Devnet node IP
+npx arcology.net-tx-sender http://192.168.1.103:8545 benchmark/ganit/txs/submit-answers/     // Replace the IP with your Devnet node IP
+```
+
+
 ## Concurrent Data Structures Used
 ### 1. AddressU256CumMap - Concurrent Player Statistics
 
