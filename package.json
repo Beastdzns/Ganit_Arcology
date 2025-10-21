@@ -1,0 +1,14 @@
+{
+  "name": "ETHOnline",
+  "version": "1.0.0",
+  "devDependencies": {
+    "hardhat": "^2.26.3"
+  },
+  "dependencies": {
+    "@arcologynetwork/concurrentlib": "^2.2.1",
+    "@arcologynetwork/frontend-util": "^1.0.10",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "ethers": "^5.8.0",
+    "progress": "^2.0.3"
+  }
+}
